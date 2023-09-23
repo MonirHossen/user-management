@@ -75,21 +75,6 @@
       };
     },
     created() {
-      this.getUserData()
-    },
-    computed: {
-      currentPageData() {
-        const startIndex = (this.currentPage - 1) * this.itemsPerPage;
-        const endIndex = startIndex + this.itemsPerPage;
-        return this.filteredData.slice(startIndex, endIndex).map((person, index) => {
-          // Calculate the SL based on the current page and index
-          const sl = startIndex + index + 1;
-          return { ...person, sl }; // Add SL property to each person
-        });
-      }
-    },
-    methods: {
-      getUserData () {
         this.loading = true
          User.all().then((res) => {
           const userData = res.data.results.map(result => {
@@ -106,7 +91,19 @@
                    console.log(error)
                }  
         });
-      },
+    },
+    computed: {
+      currentPageData() {
+        const startIndex = (this.currentPage - 1) * this.itemsPerPage;
+        const endIndex = startIndex + this.itemsPerPage;
+        return this.filteredData.slice(startIndex, endIndex).map((person, index) => {
+          // Calculate the SL based on the current page and index
+          const sl = startIndex + index + 1;
+          return { ...person, sl }; // Add SL property to each person
+        });
+      }
+    },
+    methods: {
       filterData() {
         console.log(this.searchQuery)
         const query = this.searchQuery.toLowerCase();
