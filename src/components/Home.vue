@@ -101,6 +101,10 @@
           this.filteredData = userData
           this.data = userData
           this.loading = false
+        }).catch((error) => { 
+               if (error) {
+                   console.log(error)
+               }  
         });
       },
       filterData() {
