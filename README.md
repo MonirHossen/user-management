@@ -3,6 +3,10 @@ This is a public repository based on your task 1. Here I Fetched 5000 data from 
 
 ## Project setup
 ```
+git clone https://github.com/MonirHossen/user-management.git
+```
+
+```
 cd user-management
 ```
 
