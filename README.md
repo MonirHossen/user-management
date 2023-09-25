@@ -17,6 +17,6 @@ To run the Project use this command
 ```
 npm run serve
 ```
-
+N.B: If the search does not work, please press ctrl+f5
 I hope to use those commands you will see my work. 
 Thank You.
