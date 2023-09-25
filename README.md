@@ -13,8 +13,7 @@ cd user-management
 ```
 npm install
 ```
-
-### Compiles and hot-reloads for development
+To run the Project use this command
 ```
 npm run serve
 ```
