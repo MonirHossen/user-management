@@ -18,4 +18,5 @@ To run the Project use this command
 npm run serve
 ```
 
-Thanks.
+I hope to use those commands you will see my work. 
+Thank You.
